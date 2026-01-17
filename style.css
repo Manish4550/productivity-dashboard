@@ -46,6 +46,7 @@ section.allElem {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 40px;
+  position: absolute;
 }
 .elem {
   height: 320px;
@@ -82,4 +83,20 @@ scale: 0.9;
   padding: 40px;
   font-size: 60px;
   display: none;
+ position: absolute;
+}
+
+.back{
+  position: absolute;
+  right: 5%;
+  padding: 15px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: antiquewhite;
+}
+.back:active{
+  scale: 0.98;
 }
