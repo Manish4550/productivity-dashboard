@@ -140,7 +140,7 @@ scale: 0.9;
   padding: 30px;
 }
 
-.todo-conatiner .addTask form input{
+.todo-conatiner .addTask form #task-input{
   padding: 10px 20px;
   width: 100%;
   font-size: 25px;
@@ -164,8 +164,81 @@ scale: 0.9;
   border: none;
   margin-top: 20px;
   transition: all ease 0.3;
+  
 }
 
 .todo-conatiner .addTask form button:active{
   scale: 0.98;
+}
+
+.todo-list-fullpage .todo-conatiner .allTask {
+  background-color: red;
+  height: 100%;
+  width: 65%;
+  border-radius: 10px;
+   display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 30px;
+  overflow: auto;
+}
+.task{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+}
+.task button{
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: green;
+  font-size: 18px;
+  font-weight: 600;
+  color: #eef1ff;
+}
+.task button:active{
+scale: 0.98;
+}
+.task h5{
+  color: black;
+  font-size: 30px;
+  font-weight: bolder;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.task h5 span{
+  background-color: red;
+  color: #aac4ff;
+  padding: 4px 8px;
+  border-radius: 50px;
+  font-size: 11px;
+}
+.task h5 span.true{
+opacity: 1;
+}
+.task h5 span.false{
+  opacity: 0;
+}
+.mark-imp{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-top: 15px;  
+  width: 100%;
+  gap: 30px;
+}
+.mark-imp input{
+ scale: 1.7;
+}
+
+.mark-imp label{
+ font-size: 20px;
 }
