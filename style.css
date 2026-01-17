@@ -47,6 +47,7 @@ section.allElem {
   align-items: flex-start;
   gap: 40px;
   position: absolute;
+  
 }
 .elem {
   height: 320px;
@@ -58,6 +59,7 @@ section.allElem {
   overflow: hidden;
   position: relative;
   transition:ease-in;
+  cursor: pointer;
 }
 
 .elem:active {
@@ -81,7 +83,6 @@ scale: 0.9;
   height: 100%;
   background-color: var(--pre);
   padding: 40px;
-  font-size: 60px;
   display: none;
  position: absolute;
 }
@@ -98,5 +99,73 @@ scale: 0.9;
   color: antiquewhite;
 }
 .back:active{
+  scale: 0.98;
+}
+
+.todo-list-fullpage{
+  background-color: black;
+}
+
+.todo-list-fullpage h1{
+  font-size: 65px;
+}
+
+.todo-list-fullpage .todo-conatiner{
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-list-fullpage .todo-conatiner .addTask{
+  width: 33%;
+  height: 100%;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.todo-list-fullpage .todo-conatiner .allTask{
+  background-color: red;
+  height: 100%;
+  width: 65%;
+  border-radius: 10px;
+}
+
+.todo-list-fullpage .todo-conatiner .addTask form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.todo-conatiner .addTask form input{
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+}
+.todo-conatiner .addTask form textarea{
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+.todo-conatiner .addTask form button{
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  transition: all ease 0.3;
+}
+
+.todo-conatiner .addTask form button:active{
   scale: 0.98;
 }
