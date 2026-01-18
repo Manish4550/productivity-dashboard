@@ -58,12 +58,12 @@ section.allElem {
   font-size: 10px;
   overflow: hidden;
   position: relative;
-  transition:ease-in;
+  transition: all ease-in 0.3s;
   cursor: pointer;
 }
 
 .elem:active {
-scale: 0.9;
+  scale: 0.9;
 }
 .elem img {
   height: 100%;
@@ -176,9 +176,9 @@ scale: 0.9;
   height: 100%;
   width: 65%;
   border-radius: 10px;
-   display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: space-between;
+  justify-content: space-between;
   padding: 30px;
   overflow: auto;
 }
@@ -202,7 +202,7 @@ scale: 0.9;
   color: #eef1ff;
 }
 .task button:active{
-scale: 0.98;
+  scale: 0.98;
 }
 .task h5{
   color: black;
@@ -241,4 +241,51 @@ opacity: 1;
 
 .mark-imp label{
  font-size: 20px;
+}
+
+.Daily-Planner-fullpage{
+  display: block;
+}
+
+.Daily-Planner-fullpage h2 {
+  font-size: 70px;
+}
+
+.Daily-Planner-fullpage .day-planner{
+  height: 85%;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+ 
+}
+
+.Daily-Planner-fullpage .day-planner .day-planner-time{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 15px;
+}
+.day-planner .day-planner-time p{
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  font-size: 18px;
+}
+
+.day-planner-time input {
+  padding: 20px 45px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 32px;
+  outline: none;
+  padding-top: 20px;
+  background-color: red;
 }
