@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: bold;
+  font-family: normal;
 }
 
 html,
@@ -243,9 +243,6 @@ opacity: 1;
  font-size: 20px;
 }
 
-.Daily-Planner-fullpage{
-  display: block;
-}
 
 .Daily-Planner-fullpage h2 {
   font-size: 70px;
@@ -275,7 +272,7 @@ opacity: 1;
 .day-planner .day-planner-time p{
   position: absolute;
   top: 12%;
-  left: 1%;
+  left: 2%;
   font-size: 18px;
 }
 
@@ -284,8 +281,9 @@ opacity: 1;
   width: 100%;
   border-radius: 5px;
   border: none;
-  font-size: 32px;
+  font-size: 30px;
   outline: none;
-  padding-top: 20px;
+  padding-top: 30px;
   background-color: red;
+  color: #aac4ff;
 }
