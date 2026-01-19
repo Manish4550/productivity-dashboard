@@ -8,20 +8,31 @@
   </head>
   <body>
     <div id="main">
+
+      <nav>
+            <div class="nav-in">
+                <h2>Productivity DashBoard</h2>
+            <div class="theme">
+                <h4>Change theme</h4>
+            </div>
+            </div>
+        </nav>
+
       <section class="allElem">
 
         <header>
           <div class="header1">
+            <h3>20 April 2025</h3>
             <h1>Saturday, 1:00 pm</h1>
             <h4>Bhopal (MP)</h4>
           </div>
 
           <div class="header2">
-            <h2>20 °C</h2>
+            <h2>20°C</h2>
             <h4>Light rain </h4>
-            <h3>Precipitation:35%</h3>
-            <h2>Humidity:49%</h2>
-            <h3>Wind: 10 km/h</h3>
+            <h3 class="precip">Precipitation:3%</h3>
+            <h2 class="humidity">Humidity:49%</h2>
+            <h3 class="wind"></h3>
           </div>
         </header>
 
@@ -29,35 +40,35 @@
          
           <div class="todo elem" id="0">
           <img
-            src="https://plus.unsplash.com/premium_photo-1671209794754-d00b18be3466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="./img/todolist.jpg"
             alt=""
           />
-          <h1>To Do List</h1>
+          <!-- <h1>To Do List</h1> -->
         </div>
         <div class="daily elem" id="1">
           <img
-            src="https://plus.unsplash.com/premium_photo-1671209794754-d00b18be3466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="./img/Daily planner.jpg"
             alt=""
           />
-          <h1>Daily Planner</h1>
+          <!-- <h1>Daily Planner</h1> -->
         </div>
         <div class="moti elem" id="2">
           <img
-            src="https://plus.unsplash.com/premium_photo-1671209794754-d00b18be3466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="./img/anything-is-possible-quote-lettering-typography_99493-584.avif"
             alt=""
           />
           <h1>Motivation</h1>
         </div>
         <div class="pomodoro elem" id="3">
           <img
-            src="https://plus.unsplash.com/premium_photo-1671209794754-d00b18be3466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="./img/3d-stopwatch-with-number-60_926199-3850559.jpg"
             alt=""
           />
-          <h1>Pomodoro Timer</h1>
+          <h1>Pomodoro</h1>
         </div>
         <div class="goals elem" id="4">
           <img
-            src="https://plus.unsplash.com/premium_photo-1671209794754-d00b18be3466?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="./img/goal-setting-notebook-with-handwritten-word-goals-with-cup-coffee_1210158-8066.jpg"
             alt=""
           />
           <h1>Daily Goals</h1>
@@ -74,7 +85,7 @@
           <div class="addTask">
             <form action="">
               <input id="task-input" type="text" placeholder="Enter Task">
-              <textarea placeholder="Enter Details" name="" id="" cols="30" rows="9"></textarea>
+              <textarea placeholder="Enter Details" name="" id="" cols="30" rows="7"></textarea>
               <div class="mark-imp">
                 <input type="checkbox" id="check">
               <label for="check">Mark As Important!</label>

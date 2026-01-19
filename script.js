@@ -214,14 +214,105 @@ resetbtn.addEventListener('click',resetTimer)
 
 pomodoroTimer()
 
-var apiKey = '4d6b0a762e284affb4753016261901'
+function weatherFunctionlity(){
+  var apiKey = '4d6b0a762e284affb4753016261901'
 var city = 'Bhopal'
 
+var header1Time = document.querySelector('.header1 h1')
+var header1Date = document.querySelector('.header1 h3')
+var header2Temp = document.querySelector('.header2 h2')
+var header2Condition = document.querySelector('.header2 h4')
+var precip = document.querySelector('.header2 .precip')
+var humidity = document.querySelector('.header2 .humidity')
+var wind = document.querySelector('.header2 .wind')
+
+
+
+
+
+var data = null
 async function WeatherAPICall() {
   var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+   data = await response.json()
 
-  var data = await response.json()
-  console.log(data.current.temp_c)
+   header2Temp.innerHTML =`${data.current.temp_c}°C`
+   header2Condition.innerHTML = `${data.current.condition.text}`
+   wind.innerHTML = `Wind: ${data.current.wind_kph} km/h `
+   humidity.innerHTML = `Humidity: ${data.current.humidity}%`
+   precip.innerHTML = `Heat Index: ${data.current.heatindex_c}%`
+
+  
 }
 
 WeatherAPICall()
+
+function timeDate(){
+  const totalDaysofWeek = ['Sunday','Monday','Tuesday','Wednesday','Thrusday','Friday','Saturday']
+  const months = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+  
+   var date = new Date();
+  var dayOfWeek = totalDaysofWeek[date.getDay()];
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  var tarik = date.getDate();
+  var month = months[date.getMonth()];
+  var year = date.getFullYear();
+
+
+
+   header1Date.innerHTML = `${tarik} ${month}, ${year}`
+
+   if(hours>12){
+          header1Time.innerHTML =`${dayOfWeek},${String(hours-12).padStart('2','0')}:${String(minutes).padStart('2','0')}:${String(seconds).padStart('2','0')} PM `
+   }
+    else{
+          header1Time.innerHTML =`${dayOfWeek},${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}:${String(seconds).padStart('2','0')} AM `
+
+      }
+
+}
+
+setInterval(()=> {
+timeDate()
+})
+}
+weatherFunctionlity()
+
+function changeTheme() {
+
+    var theme = document.querySelector('.theme')
+    var rootElement = document.documentElement
+
+    var flag = 0
+    theme.addEventListener('click', function () {
+
+        if (flag == 0) {
+            rootElement.style.setProperty('--pri', '#F8F4E1')
+            rootElement.style.setProperty('--sec', '#222831')
+            rootElement.style.setProperty('--tri1', '#948979')
+            rootElement.style.setProperty('--tri2', '#393E46')
+            flag = 1
+        } else if (flag == 1) {
+            rootElement.style.setProperty('--pri', '#F1EFEC')
+            rootElement.style.setProperty('--sec', '#030303')
+            rootElement.style.setProperty('--tri1', '#D4C9BE')
+            rootElement.style.setProperty('--tri2', '#123458')
+            flag = 2
+        } else if (flag == 2) {
+            rootElement.style.setProperty('--pri', '#F8F4E1')
+            rootElement.style.setProperty('--sec', '#381c0a')
+            rootElement.style.setProperty('--tri1', '#FEBA17')
+            rootElement.style.setProperty('--tri2', '#74512D')
+            flag = 0
+        }
+
+    })
+
+
+}
+
+changeTheme()
