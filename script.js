@@ -127,7 +127,7 @@ function motivationalQuote() {
     var motivationAuthor = document.querySelector('.motivation-3 h2')
 
     async function fetchQuote() {
-        let response = await fetch('https://api.quotable.io/random')
+        let response = await fetch('https://api.quotable.dev/random')
         let data = await response.json()
 
         motivationQuoteContent.innerHTML = data.content
@@ -140,7 +140,8 @@ function motivationalQuote() {
 motivationalQuote()
 
 
-let timer = document.querySelector('.pomo-timer h1')
+function pomodoroTimer(){
+  let timer = document.querySelector('.pomo-timer h1')
 let startbtn = document.querySelector('.pomo-timer .start-timer')
 let pausetbtn = document.querySelector('.pomo-timer .pause-timer')
 let resetbtn = document.querySelector('.pomo-timer .reset-timer')
@@ -208,3 +209,19 @@ function resetTimer(){
 startbtn.addEventListener('click', startTimer)
 pausetbtn.addEventListener('click',pauseTimer)
 resetbtn.addEventListener('click',resetTimer)
+
+}
+
+pomodoroTimer()
+
+var apiKey = '4d6b0a762e284affb4753016261901'
+var city = 'Bhopal'
+
+async function WeatherAPICall() {
+  var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+
+  var data = await response.json()
+  console.log(data.current.temp_c)
+}
+
+WeatherAPICall()
