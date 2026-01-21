@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --pri: #F8F4E1;
     --sec: #381c0a;
@@ -25,7 +32,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: var(--pri);
 }
@@ -61,9 +69,15 @@ section.allElem {
   background-position: center;
   margin-bottom: 40px;
     border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 padding: 35px 50px;  
  }
 
@@ -104,10 +118,17 @@ padding: 35px 50px;
     opacity: 0.8;
  }
 .allElem .allFeatures{
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
 }
 .elem {
   height: 320px;
@@ -118,6 +139,8 @@ display: flex;
   font-size: 10px;
   overflow: hidden;
   position: relative;
+  -webkit-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
   cursor: pointer;
 }
@@ -128,12 +151,14 @@ display: flex;
 .elem img {
   height: 100%;
   width: 100%;
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
 }
 .daily img{
   height: 100%;
   width: 100%;
-  object-fit:cover;
+  -o-object-fit:cover;
+     object-fit:cover;
   scale: 1.12;
 }
 
@@ -180,9 +205,15 @@ background-color: var(--sec);
   height: 80%;
   width: 100%;
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .todo-list-fullpage .todo-conatiner .addTask{
@@ -200,9 +231,16 @@ background-color: var(--sec);
 }
 
 .todo-list-fullpage .todo-conatiner .addTask form{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 30px;
 }
 
@@ -617,4 +655,17 @@ nav {
 
 .theme:active {
     scale: 0.96;
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }

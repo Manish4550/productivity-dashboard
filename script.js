@@ -127,12 +127,17 @@ function motivationalQuote() {
     var motivationAuthor = document.querySelector('.motivation-3 h2')
 
     async function fetchQuote() {
-        let response = await fetch('https://api.quotable.dev/random')
-        let data = await response.json()
+  try {
+    let response = await fetch("https://api.quotable.io/random");
+    let data = await response.json();
 
-        motivationQuoteContent.innerHTML = data.content
-        motivationAuthor.innerHTML = data.author
-    }
+    motivationQuoteContent.innerHTML = data.content;
+    motivationAuthor.innerHTML = data.author;
+
+  } catch (error) {
+    console.log("Failed to load quote", error);
+  }
+}
 
     fetchQuote()
 }
